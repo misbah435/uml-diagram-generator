@@ -1,39 +1,100 @@
-﻿# UML Class Diagram Generator
+﻿# UML Diagram Generator
 
-An interactive, browser-based tool for visually designing UML class diagrams and generating corresponding Java source code in real time.
+An interactive UML diagram generation tool built with React. Create and visualize UML class diagrams through a clean, interactive interface.
 
-## Features
-- Drag-and-drop class boxes on a canvas
-- Live editing of class name, attributes, and methods via a side inspector
-- Draw relationship lines (association/inheritance) between classes
-- Delete classes and relationships
-- Real-time Java code generation reflecting the current diagram
+## ✨ Features
 
-## Tech Stack
-- React 19 (Vite)
-- SVG for relationship line rendering
-- Native mouse events for drag-and-drop (no external DnD library)
+- **Class Boxes:** Display UML classes in a structured format.
+- **Relationship Visualization:** Show connections between classes.
+- **Code Panel:** View and work with code alongside the diagram.
+- **Inspector Panel:** Inspect selected diagram elements.
+- **Interactive Interface:** A modern interface for working with UML diagrams.
+- **Responsive Styling:** Clean, organized visual layout.
 
-## How to Use
-1. Click "+ Add Class" to create a new class box
-2. Click a class to select it and edit its name/attributes/methods in the side panel
-3. Click "Connect Classes," then click two classes in sequence to draw a relationship
-4. Click "View Java Code" to see generated Java for all classes
+## 🛠️ Tech Stack
 
-## Design Notes
-- Drag state is managed via `useRef` and `window`-level mouse listeners for smooth, uninterrupted dragging
-- Class and relationship data are held in React state at the App level (single source of truth)
-- Java generation is a pure function that reads live class data and relationships, producing valid Java syntax including inheritance (`extends`)
+- React
+- JavaScript
+- CSS
+- Vite
+- Git and GitHub
 
-## Setup
+## 📁 Project Structure
+
+```text
+uml-diagram-generator/
+│
+├── src/
+│   ├── components/
+│   │   ├── ClassBox.jsx
+│   │   ├── CodePanel.jsx
+│   │   ├── Inspector.jsx
+│   │   └── RelationshipLines.jsx
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   └── index.css
+│
+├── public/
+├── package.json
+└── README.md
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+- Git
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/misbah435/uml-diagram-generator.git
+```
+
+### 2. Open the Project
+
+```bash
+cd uml-diagram-generator
+```
+
+### 3. Install Dependencies
+
 ```bash
 npm install
+```
+
+### 4. Start the Development Server
+
+```bash
 npm run dev
 ```
 
-## Screenshots
+Open the local URL displayed in your terminal.
 
-![Diagram](screenshots/diagram.png)
+## 💻 Available Commands
 
-![Java code](screenshots/java-code.png)
+| Command | Description |
+|---|---|
+| `npm install` | Install dependencies |
+| `npm run dev` | Start development server |
+| `npm run build` | Build production version |
+| `npm run preview` | Preview production build |
 
+## 👩‍💻 Developer
+
+**Misbah Shaikh**
+
+Computer Science Engineering Student
+
+GitHub: [@misbah435](https://github.com/misbah435)
+
+## 🔗 Repository
+
+[UML Diagram Generator – GitHub](https://github.com/misbah435/uml-diagram-generator)
+
+## 📄 License
+
+Developed for educational and project purposes.
